@@ -1,0 +1,25 @@
+Ocena zostanie wystawiona na podstawie niewielkiego projektu zaliczeniowego. Projet ten będzie oceniony wg. poniższych jedenastu kryetriów:
+•	czy wykorzystano co najmniej trzy wzorce projektowe
+•	czy prawidłowo zdekomponowano odpowiedzialności
+•	czy wykorzystano jakiś wzorzec architektoniczny
+
+•	czy projekt jest Mavenowy i czy poprawnie buduje się z linii komend
+•	czy budowany jest przez Mavena wykonywalny jar
+•	czy zrealizowano co najmniej 5 przykładowych testów jednostkowych
+•	czy testy jednostkowe mają status PASSED w trakcie procesu budowania projektu przez Mavena
+
+•	czy projekt został umieszczony pod kontrolą wersji za pomocą Gita 
+•	czy struktura gałęzi repozytorium jest prawidłowo zarządzana
+
+•	czy skorzystano z interfejsów i/lub klas abstrakcyjnych do reprezentowania abstrakcji jako jednego z elementów programowania obiektowego
+•	czy skorzystano z polimorfizmu
+
+Ocena z laboratorium zostanie wyliczona w następujący sposób:
+•	5.0 dla spełnionych [11] powyższych kryteriów
+•	4.5 dla spełnionych [9-10] powyższych kryteriów
+•	4.0 dla spełnionych[7-8] powyższych kryteriów
+•	3.5 dla spełninych [5-6] powyższych kryteriów
+•	3.0 dla spełnionych [0-4] powyższych kryteriów
+
+http://strefakodera.pl/programowanie/c/programowanie-obiektowe-w-c-system-rezerwacji-biletow-w-kinie-cz-ii
+http://strefakodera.pl/programowanie/c/programowanie-obiektowe-w-c-system-rezerwacji-biletow-w-kinie-cz-iii
