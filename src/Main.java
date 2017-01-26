@@ -6,19 +6,19 @@ import java.util.Scanner;
  */
 
 
-public class Main {
+public class Main extends KeyboardHandler{
 
     static int opcjaMenu = 0;
     static Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args){
 
         Kino kino;
 
 
         //kino.wyswietl_wszystkie_miejsca();
         showMenu();
-        wczytaj();
+        wczytaj(opcjaMenu,scanner);
 
         while(opcjaMenu != 7)
         {
@@ -50,15 +50,8 @@ public class Main {
             }
 
             showMenu();
-            wczytaj();
+            wczytaj(opcjaMenu,scanner);
         }
-    }
-
-    private static void wczytaj() throws IOException {
-        System.out.println("Podaj opcje:");
-        opcjaMenu = scanner.nextInt();
-        
-
     }
 
 

@@ -4,5 +4,6 @@
 public interface KinoInterface {
 
     public void wypisz();
+    public void wycofajRezewacje();
 
 }
