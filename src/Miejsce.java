@@ -25,22 +25,30 @@ public class Miejsce implements KinoInterface{
     }
 
     @Override
-    public void wypisz() {
+    public void wypisz() { //wypisze kto ma rezerwacje na jakim miejscu
         if (zarezerwowane){
-            System.out.println("Rezerwacja "+imie+" "+nazwisko+" na miejsce "+numer);
+            System.out.println("Miejsce "+numer+" zarezerwowane przez "+imie+" "+nazwisko);
         }
         else {
             System.out.println("Miejsce "+numer+" jest wolne");
         }
     }
 
+    @Override
+    public void wczytaj() {
+        System.out.println("Podaj imie");
+        imie = scanner.nextLine();
+        System.out.println("Podaj nazwisko");
+        nazwisko = scanner.nextLine();
+    }
+
+    @Override
     public void zarezerwuj(){
         if (zarezerwowane){
             System.out.println("Miejsce już zarezerwowane, prosze wybrac inne");
         }
         else {
-            imie = scanner.nextLine();
-            nazwisko = scanner.nextLine();
+            wczytaj();
             zarezerwowane = true;
             System.out.println("Zarezerwowales miejsce "+numer+ " jako: "+imie+" "+ nazwisko);
         }
@@ -55,9 +63,10 @@ public class Miejsce implements KinoInterface{
             System.out.println("Anulowales rezerwacje");
         }
         else{
-            System.out.println("Taka rezerwacja nei istnieje");
+            System.out.println("Taka rezerwacja nie istnieje");
         }
     }
+
 
     public boolean czyZarezerwowane(){
         return zarezerwowane;

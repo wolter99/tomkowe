@@ -11,7 +11,17 @@ public class Film implements KinoInterface{
     }
 
     @Override
+    public void wczytaj() {
+
+    }
+
+    @Override
     public void wycofajRezewacje() {
+
+    }
+
+    @Override
+    public void zarezerwuj() {
 
     }
 }
