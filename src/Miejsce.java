@@ -25,7 +25,12 @@ public class Miejsce implements KinoInterface{
     }
 
     @Override
-    public void wypisz() { //wypisze kto ma rezerwacje na jakim miejscu
+    public void wypisz() {
+
+    }
+
+    @Override
+    public void wypiszWszystkieMiejsca() {
         if (zarezerwowane){
             System.out.println("Miejsce "+numer+" zarezerwowane przez "+imie+" "+nazwisko);
         }

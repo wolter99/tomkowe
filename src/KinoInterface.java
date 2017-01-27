@@ -7,5 +7,6 @@ public interface KinoInterface {
     public void wczytaj();
     public void wycofajRezewacje();
     public void zarezerwuj();
+    public void wypiszWszystkieMiejsca();
 
 }

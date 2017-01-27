@@ -28,9 +28,14 @@ public class Film implements KinoInterface{
     }
 
     @Override
-    public void wypisz() { //wypisze wszystkie mejsca
+    public void wypisz() {
+        System.out.println("Tytul: " + tytul);
+    }
+
+    @Override
+    public void wypiszWszystkieMiejsca() { //wypisze wszystkie mejsca
         for(Miejsce m:miejsca){
-            m.wypisz();
+            m.wypiszWszystkieMiejsca();
         }
     }
 
@@ -59,6 +64,10 @@ public class Film implements KinoInterface{
         if(wybraneMiejsce>0 && wybraneMiejsce<=liczbaMiejsc){
             miejsca.get(wybraneMiejsce-1).zarezerwuj();
         }
+    }
+
+    public Miejsce numerFilmu(int x){
+        return miejsca.get(x);
     }
 
     @Override

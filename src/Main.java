@@ -17,6 +17,12 @@ public class Main{
         showMenu();
         wczytaj();
 
+        kino.dodajFilm("Szklana Puapka");
+        kino.dodajFilm("Avangers");
+        kino.dodajFilm("Star Wars");
+        kino.dodajFilm("Szybcy i Wsciekli");
+        
+
         while(opcjaMenu != 5)
         {
             switch(opcjaMenu)
