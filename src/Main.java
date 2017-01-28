@@ -14,16 +14,15 @@ public class Main{
     public static void main(String[] args) throws IOException {
 
         Kino kino = new Kino();
-        showMenu();
-        wczytaj();
-
         kino.dodajFilm("Szklana Puapka");
         kino.dodajFilm("Avangers");
         kino.dodajFilm("Star Wars");
         kino.dodajFilm("Szybcy i Wsciekli");
-        
+        System.out.println();
+        showMenu();
+        wczytaj();
 
-        while(opcjaMenu != 5)
+        while(opcjaMenu >=1 && opcjaMenu <= 6)
         {
             switch(opcjaMenu)
             {
@@ -44,7 +43,19 @@ public class Main{
                     break;
                 case 4:
                     System.out.println("Miejsca:");
-                    kino.wypisz();
+                    kino.wypiszWszystkieMiejsca();
+                    System.out.println();
+                    czekaj();
+                    break;
+                case 5:
+                    System.out.println("Wolne miejsca");
+                    kino.wypiszWolneMiejsca();
+                    System.out.println();
+                    czekaj();
+                    break;
+                case 6:
+                    System.out.println("Zarezerwowane miejsca");
+                    kino.wypiszZarezerwowaneMiejsca();
                     System.out.println();
                     czekaj();
                     break;
@@ -67,13 +78,15 @@ public class Main{
         System.out.println("2 - Usun rezerwacje");
         System.out.println("3 - Sprawdz miejsce");
         System.out.println("4 - Wyswietl wszystkie miejsca");
-        System.out.println("5 - Zamknij system");
+        System.out.println("5 - Wyswietl wolne miejsca");
+        System.out.println("6 - Wyswietl zarezerwowane miejsca");
+        System.out.println("7 - Zamknij system");
     }
 
     private static void wczytaj(){
         System.out.println("Podaj opcje:");
         opcjaMenu = scanner.nextInt();
-        for (int i = 0; i < 20; ++i) System.out.println();
+        for (int i = 0; i < 5; ++i) System.out.println();
     }
 
 }

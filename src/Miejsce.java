@@ -26,17 +26,17 @@ public class Miejsce implements KinoInterface{
 
     @Override
     public void wypisz() {
-
-    }
-
-    @Override
-    public void wypiszWszystkieMiejsca() {
         if (zarezerwowane){
             System.out.println("Miejsce "+numer+" zarezerwowane przez "+imie+" "+nazwisko);
         }
         else {
             System.out.println("Miejsce "+numer+" jest wolne");
         }
+    }
+
+    @Override
+    public void wypiszWszystkieMiejsca() {
+
     }
 
     @Override

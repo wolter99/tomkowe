@@ -19,7 +19,7 @@ public class Kino implements KinoInterface {
         this.liczbaDodanychFilmow = 0;
     }
 
-    public void wypiszWolneMiejsca(){ //wypisuje wolne miejsca miejsca na kazdy film
+    public void wypiszWolneMiejsca(){
         for(Film f:filmy){
             f.wypisz();
             f.wypiszWolneMiejsca();
@@ -52,25 +52,30 @@ public class Kino implements KinoInterface {
     @Override
     public void zarezerwuj(){
         System.out.println("Rezerwacja w toku...");
-        wyswietlFilmy();
         wybierzFilm();
-        filmy.get(wybranyFilm-1).zarezerwuj();
 
+        if(wybranyFilm!=0) {
+            filmy.get(wybranyFilm - 1).zarezerwuj();
+        }
     }
 
     @Override
     public void wycofajRezewacje() {
         System.out.println("Zezygnacja z rezerwcji...");
-        wyswietlFilmy();
         wybierzFilm();
-        filmy.get(wybranyFilm-1).wycofajRezewacje();
+        if(wybranyFilm!=0) {
+            filmy.get(wybranyFilm - 1).wycofajRezewacje();
+        }
     }
 
     public void sprawdzMiejsce(){
         System.out.println("Sprawdzanie miejsca...");
-        wyswietlFilmy();
         wybierzFilm();
-        filmy.get(wybranyFilm-1).sprawdzMiejsce();
+        if(wybranyFilm!=0){
+
+            filmy.get(wybranyFilm-1).sprawdzMiejsce();
+        }
+
     }
 
     public void dodajFilm(String tytul){
@@ -97,13 +102,13 @@ public class Kino implements KinoInterface {
     }
 
     public void wyswietlFilmy(){
-        int i = 0;
+        int i = 1;
         for (Film f:filmy){
-            System.out.println("Film nr: "+ f.numerFilmu(i)+1);
+            System.out.println("Film nr: "+ i);
             f.wypisz();
-            System.out.println();
             i++;
         }
+        i--;
         System.out.println("Filmow jest "+i);
         System.out.println();
     }

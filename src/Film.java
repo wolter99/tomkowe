@@ -33,32 +33,33 @@ public class Film implements KinoInterface{
     }
 
     @Override
-    public void wypiszWszystkieMiejsca() { //wypisze wszystkie mejsca
+    public void wypiszWszystkieMiejsca() {
         for(Miejsce m:miejsca){
-            m.wypiszWszystkieMiejsca();
+            m.wypisz();
         }
     }
 
     public void wypiszWolneMiejsca(){
-        System.out.println("Wolne miejsca prosze wybrac jedno:");
         for(Miejsce m:miejsca){
             if (!m.czyZarezerwowane()){
                 System.out.print(m.numer+", ");
             }
         }
+
     }
 
     public void wypiszZarezerwowaneMiejsca(){
-        System.out.println("Zarezerwowane miejsca prosze wybrac jedno aby anulowac:");
         for(Miejsce m:miejsca){
             if (m.czyZarezerwowane()){
                 System.out.print(m.numer+", ");
             }
         }
+
     }
 
     @Override
     public void zarezerwuj(){
+        System.out.println("Wybierz miejsce:");
         wypiszWolneMiejsca();
         wybierzMiejsce();
         if(wybraneMiejsce>0 && wybraneMiejsce<=liczbaMiejsc){
@@ -66,12 +67,9 @@ public class Film implements KinoInterface{
         }
     }
 
-    public Miejsce numerFilmu(int x){
-        return miejsca.get(x);
-    }
-
     @Override
     public void wycofajRezewacje() {
+        System.out.println("Wybierz miejsce:");
         wypiszZarezerwowaneMiejsca();
         wybierzMiejsce();
         if(wybraneMiejsce>0 && wybraneMiejsce<=liczbaMiejsc){
@@ -95,6 +93,7 @@ public class Film implements KinoInterface{
     }
 
     public void sprawdzMiejsce(){
+        System.out.println("Wybierz miejsce od 1 do "+liczbaMiejsc);
         wybierzMiejsce();
         if(wybraneMiejsce>0 && wybraneMiejsce<=liczbaMiejsc){
             miejsca.get(wybraneMiejsce - 1).wypisz();
@@ -104,7 +103,7 @@ public class Film implements KinoInterface{
 
     @Override
     public void wczytaj(){
-        System.out.println("Podaj miejsce:");
+
         wybraneMiejsce = scanner.nextInt();
         //for (int i = 0; i < 20; ++i) System.out.println();
     }
